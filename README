@@ -22,7 +22,7 @@ How to Configure Rules:
 
 1.	conf/rules.conf - This file contains the monitor rule configurations.
 
-Ex : 	192.168.9.137:load_fifteen:>:15 ( Alert will be send when fifteenminute load is lesser than 15
+Ex : 	192.168.9.137:load_fifteen:>:15 ( Alert will be send when fifteenminute load is greater than 15
 
 Here,
 	192.168.9.137	-	gmond IPAddress the one which has to be monitored.
