@@ -1,7 +1,7 @@
 Ganglia Metrics Monitor Program:
 ================================
 
-	Simple PERL Program which monitors the ganglia_metrics and alert the user through Email/SMS.
+	(ganglia alert) Simple PERL Program which monitors the ganglia_metrics and alert the user through Email/SMS.
 
 Pre-Requisites:
 ===============
