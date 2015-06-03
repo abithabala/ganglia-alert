@@ -1,0 +1,55 @@
+Ganglia Metrics Monitor Program:
+================================
+
+	Simple PERL Program which monitors the ganglia_metrics and alert the user through Email/SMS.
+
+Pre-Requisites:
+===============
+
+MIME::Lite	-	Provides the facility to send EMail in HTML form.
+XML::LibXML	-	Supports XML Parsing.
+
+Install the above Perl modules from CPAN if not exist.
+
+How to Configure Alert:
+=======================
+
+1.	Provide the required configuration in conf/alert.conf.
+
+
+How to Configure Rules:
+======================
+
+1.	conf/rules.conf - This file contains the monitor rule configurations.
+
+Ex : 	192.168.9.137:load_fifteen:>:15 ( Alert will be send when fifteenminute load is lesser than 15
+
+Here,
+	192.168.9.137	-	gmond IPAddress the one which has to be monitored.
+	load_fifteen	-	metric name which has to be monitored on the provided gmond.
+	>		-	Condition
+	15		-	Threshold value.
+
+How to Run:
+===========
+
+Let , galert is available in : /home/bala/galert/
+
+	/home/bala/galert/ 
+	|_____________________________	galert.pl
+	|_____________________________ conf/alert.conf
+	|_____________________________ conf/rules.conf		
+
+1. Provide the executable permission to galert.pl
+2. Add the Crontab as below.
+
+*/15 * * * * cd /home/bala/galert/; perl galert.pl ; cd - 
+( Above Cron entry triggers the script for every 15 Mins.You can alter the cron as you wish)
+
+
+
+TODO:
+====
+1. SMTP_USER / SMTP_PASSWORD - authentication.
+2. SMS Implementation
+
