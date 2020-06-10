@@ -33,9 +33,9 @@ Here,
 How to Run:
 ===========
 
-Let , galert is available in : /home/bala/galert/
+Let , galert is available in : /home/user/galert/
 
-	/home/bala/galert/ 
+	/home/user/galert/ 
 	|_____________________________	galert.pl
 	|_____________________________ conf/alert.conf
 	|_____________________________ conf/rules.conf		
@@ -43,7 +43,7 @@ Let , galert is available in : /home/bala/galert/
 1. Provide the executable permission to galert.pl
 2. Add the Crontab as below.
 
-*/15 * * * * cd /home/bala/galert/; perl galert.pl ; cd - 
+*/15 * * * * cd /home/user/galert/; perl galert.pl ; cd - 
 ( Above Cron entry triggers the script for every 15 Mins.You can alter the cron as you wish)
 
 
