@@ -9,7 +9,7 @@ use POSIX qw(strftime);
 
 
 my $log = "alert_log";
-my $alert_conf = "conf/alert.conf";
+my $ALERT_CONF = "conf/alert.conf";
 my $RULES_CONF = "conf/rules.conf";
 my %ALERT_CONF_DATA;
 my %RULES_DATA;
@@ -169,12 +169,12 @@ sub uniq {
 sub loadAlertConfigurations{
 
 
-	if(! -e "$alert_conf"){
-		logger("$alert_conf does not exist.quitting..");
+	if(! -e "$ALERT_CONF"){
+		logger("$ALERT_CONF does not exist.quitting..");
 		die "No alert conf exist . Exiting.";
 	}
 
-	open FH,"$alert_conf" or die "Unable to read $alert_conf";
+	open FH,"$ALERT_CONF" or die "Unable to read $ALERT_CONF";
 	
 	while(my $line = <FH>){
 
